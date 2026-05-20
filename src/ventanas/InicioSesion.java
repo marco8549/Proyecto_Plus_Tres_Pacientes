@@ -36,6 +36,7 @@ public class InicioSesion extends javax.swing.JDialog {
         nombrePaciente = new javax.swing.JTextField();
         contrasenyaPaciente = new javax.swing.JPasswordField();
         entrarPaciente = new javax.swing.JButton();
+        registrarPaciente = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -48,6 +49,10 @@ public class InicioSesion extends javax.swing.JDialog {
         jLabel3.setText("Contraseña");
 
         entrarPaciente.setText("Entrar");
+        entrarPaciente.addActionListener(this::entrarPacienteActionPerformed);
+
+        registrarPaciente.setText("Registrar");
+        registrarPaciente.addActionListener(this::registrarPacienteActionPerformed);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -64,7 +69,9 @@ public class InicioSesion extends javax.swing.JDialog {
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(nombrePaciente)
                         .addComponent(contrasenyaPaciente, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE))
-                    .addComponent(entrarPaciente))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(registrarPaciente, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
+                        .addComponent(entrarPaciente, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(0, 42, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -83,6 +90,8 @@ public class InicioSesion extends javax.swing.JDialog {
                     .addComponent(contrasenyaPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(61, 61, 61)
                 .addComponent(entrarPaciente)
+                .addGap(35, 35, 35)
+                .addComponent(registrarPaciente)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -100,6 +109,18 @@ public class InicioSesion extends javax.swing.JDialog {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    /// Boton para poder entrar el usuario
+    private void entrarPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarPacienteActionPerformed
+        PaginaPrincipal pp = new PaginaPrincipal(null, true);
+        pp.setVisible(true);
+    }//GEN-LAST:event_entrarPacienteActionPerformed
+
+    /// Boton para registrar un paciente
+    private void registrarPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrarPacienteActionPerformed
+        Registro r = new Registro(null, true);
+        r.setVisible(true);
+    }//GEN-LAST:event_registrarPacienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -146,5 +167,6 @@ public class InicioSesion extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField nombrePaciente;
+    private javax.swing.JButton registrarPaciente;
     // End of variables declaration//GEN-END:variables
 }

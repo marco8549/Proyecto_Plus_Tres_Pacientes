@@ -4,6 +4,8 @@
  */
 package proyecto_plus_tres_pacientes;
 
+import ventanas.InicioSesion;
+
 /**
  *
  * @author Marco Antonio
@@ -14,7 +16,11 @@ public class Proyecto_Plus_Tres_Pacientes {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        InicioSesion is = new InicioSesion(null, true);
+        
+        is.setVisible(true);
+
     }
-    
+
 }
